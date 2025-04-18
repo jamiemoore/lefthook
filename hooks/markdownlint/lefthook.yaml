@@ -3,4 +3,5 @@ pre-commit:
   commands:
     markdownlint:
       glob: "*.md"
-      run: docker run -v $(pwd):/workdir -v ${LEFTHOOK_REPO_ROOT}/hooks/markdownlint/.markdownlint.yaml:/workdir/.markdownlint.yaml ghcr.io/igorshubovych/markdownlint-cli:latest --dot -c .markdownlint.yaml {staged_files}
+      # run: docker run -v $(pwd):/workdir -v ${LEFTHOOK_REPO_ROOT}/hooks/markdownlint/.markdownlint.yaml:/workdir/.markdownlint.yaml ghcr.io/igorshubovych/markdownlint-cli:latest --dot -c .markdownlint.yaml {staged_files}
+      run: docker run -v $(pwd):/workdir ghcr.io/igorshubovych/markdownlint-cli:latest --dot -c .markdownlint.yaml {staged_files}

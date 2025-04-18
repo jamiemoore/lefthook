@@ -1,0 +1,3 @@
+---
+MD040: false # Don't require a specific language specifed in code blocks
+MD013: false # Don't check line length
