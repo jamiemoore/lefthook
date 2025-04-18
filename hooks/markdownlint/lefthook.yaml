@@ -1,6 +1,6 @@
 ---
 pre-commit:
   commands:
-    markdown-lint:
+    markdownlint:
       glob: "*.md"
       run: docker run -v $(pwd):/workdir ghcr.io/igorshubovych/markdownlint-cli:latest --dot -c .markdownlint.yaml {staged_files}
